@@ -1,3 +1,0 @@
-proyecto_orientado_objetos
-
-fff
