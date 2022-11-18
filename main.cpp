@@ -97,6 +97,19 @@ int main () {
 	Destinos w2(3,"San Luis Potosi");
 	Destinos w3(4,"Puebla");
 	
+	//Personal () calculara el numero de empleados
+	
+	//Cantidades()  calculara el numero de autos totales
+	
+	//lugares()  Obtendra la distancia en kilometros del lugar de destino
+	
+	//Nacional()
+	//Regional()  Ambos se encargaran de identificar si el viaje sera dentro del estado o fuera de el
+	
+	//FueraQueretaro() Se encargara de cobrar a base de la gasolina gastada
+	
+	//Queretaro() Cobrara a base del kilometraje 
+	
 	cout<<"Personal"<<endl;
 	cout<<"***********"<<endl;
 	p1.hablar();
