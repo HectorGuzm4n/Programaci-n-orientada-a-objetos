@@ -16,3 +16,6 @@ AVANCE 1
 
 En este avance se declararon 3 clases: conductor,auto y destinos. A cada clase se les dio atributos y se les manda a llamar en el main
 
+AVANCE 2
+
+Se realizo un diagrama de clases UML en el que se declaraban todas las clases y sus atributos y tambien son llamadas en el main
