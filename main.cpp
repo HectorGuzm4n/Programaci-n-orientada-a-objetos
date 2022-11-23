@@ -7,22 +7,22 @@ class Conductor {
 		int edad;
 		string nombre;
 		
-	public:
+	public: //setters
 		Conductor(int,string);
-		void manejar();
-		void hablar();
+		void set_nombre();
+		void set_edad();
 };
 
 Conductor::Conductor(int _edad,string _nombre){
 	edad=_edad;
 	nombre=_nombre;
 }
-
-void Conductor::hablar(){
+//getters
+void Conductor::set_nombre(){
 	cout<<"Nombre: "<<nombre<<" "<<endl;
 }
 
-void Conductor::manejar(){
+void Conductor::set_edad(){
 	cout<<"Edad: "<<edad<< " "<<endl;
 } 
 
@@ -32,7 +32,7 @@ class Auto {
 		int cantidad;
 		string marca;
 		
-	public:
+	public: //setters
 		Auto(int,string);
 		void contar();
 		void tipo();
@@ -43,7 +43,7 @@ Auto::Auto(int _cantidad,string _marca){
 	cantidad=_cantidad;
 	marca=_marca;
 }
-
+//getters
 void Auto::contar(){
 	cout<<"Unidades disponilbes: "<<cantidad<<" "<<endl;
 }
@@ -60,7 +60,7 @@ class Destinos {
 		int tiempo;
 		string lugar;
 		
-	public:
+	public: //setters
 		Destinos(int,string);
 		void horas();
 		void destino();
@@ -71,7 +71,7 @@ Destinos::Destinos(int _tiempo,string _lugar){
 	tiempo=_tiempo;
 	lugar=_lugar;
 }
-
+//getters
 void Destinos::horas(){
 	cout<<"Tiempo: "<<tiempo<<" horas "<<endl;
 }
@@ -84,69 +84,89 @@ void Destinos::destino(){
 
 
 int main () {
-	cout<<"Registro de servico de transporte"<<endl;
-	Conductor p1 = Conductor(22, "Oscar");
-	Conductor p2(25,"Victor");
-	Conductor p3(30, "Alain");
 	
-	Auto q1 = Auto(25,"Tsuru");
-	Auto q2(10,"Camaro");
-	Auto q3(45,"Leon 245 HP");
-	
-	Destinos w1 = Destinos(3,"CDMX");
-	Destinos w2(3,"San Luis Potosi");
-	Destinos w3(4,"Puebla");
-	
-	//Personal () calculara el numero de empleados
-	
-	//Cantidades()  calculara el numero de autos totales
-	
-	//lugares()  Obtendra la distancia en kilometros del lugar de destino
-	
-	//Nacional()
-	//Regional()  Ambos se encargaran de identificar si el viaje sera dentro del estado o fuera de el
-	
-	//FueraQueretaro() Se encargara de cobrar a base de la gasolina gastada
-	
-	//Queretaro() Cobrara a base del kilometraje 
-	
-	cout<<"Personal"<<endl;
-	cout<<"***********"<<endl;
-	p1.hablar();
-	p1.manejar();
-	cout<<"***********"<<endl;
-	p2.hablar();
-	p2.manejar();
-	cout<<"***********"<<endl;
-	p3.hablar();
-	p3.manejar();
-	cout<<"***********"<<endl;
-	cout<<"***********"<<endl;
-	cout<<"Autos"<<endl;
-	cout<<"***********"<<endl;
-	q1.tipo();
-	q1.contar();
-	cout<<"***********"<<endl;
-	q2.tipo();
-	q2.contar();
-	cout<<"***********"<<endl;
-	q3.tipo();
-	q3.contar();
-	cout<<"***********"<<endl;
-	cout<<"***********"<<endl;
-	cout<<"Destinos"<<endl;
-	cout<<"***********"<<endl;
-	w1.destino();
-	w1.horas();
-	cout<<"***********"<<endl;
-	w2.destino();
-	w2.horas();
-	cout<<"***********"<<endl;
-	w3.destino();
-	w3.horas();
-	
-	
-	
-	system ("pause");
-	return 0;
+	 int opcion;
+    bool repetir = true;
+    
+    do {
+        system("cls");
+        
+        cout << "\n\nServicio de transporte" << endl;
+        cout << "1. Personal" << endl;
+        cout << "2. Autos" << endl;
+        cout << "3. Destinos" << endl;
+        cout << "0. SALIR" << endl;
+        
+        cout << "\nIngrese una opcion: ";
+        cin >> opcion;
+        
+        switch (opcion) {
+            case 1: {
+                Conductor p1 = Conductor(22, "Oscar");
+				Conductor p2(25,"Victor");
+				Conductor p3(30, "Alain");  
+				
+				cout << "Personal total: 3 "<<endl;
+				p1.set_nombre();
+				p1.set_edad();
+				cout<<"***********"<<endl;
+				p2.set_nombre();
+				p2.set_edad();
+				cout<<"***********"<<endl;
+				p3.set_nombre();
+				p3.set_edad();            
+                
+                system("pause>nul");
+                break;
+            }
+                
+            case 2: {
+                	Auto q1 = Auto(25,"Tsuru");
+					Auto q2(10,"Camaro");
+					Auto q3(45,"Leon 245 HP");  
+					
+					q1.tipo();
+					q1.contar();
+					cout<<"***********"<<endl;
+					q2.tipo();
+					q2.contar();
+					cout<<"***********"<<endl;
+					q3.tipo();
+					q3.contar();              
+                
+                system("pause>nul"); // Pausa
+                break;
+            }
+                
+            case 3: {
+                Destinos w1 = Destinos(3,"CDMX");
+				Destinos w2(3,"San Luis Potosi");
+				Destinos w3(4,"Puebla");
+				
+				w1.destino();
+				w1.horas();
+				cout<<"***********"<<endl;
+				w2.destino();
+				w2.horas();
+				cout<<"***********"<<endl;
+				w3.destino();
+				w3.horas();
+	               
+                
+                system("pause>nul"); // Pausa            
+                break;
+            }
+            
+            case 0: {
+            	repetir = false;
+            	break;
+            }
+        }        
+    } while (repetir);
+	 
+    return 0;
 }
+	
+	
+	
+
