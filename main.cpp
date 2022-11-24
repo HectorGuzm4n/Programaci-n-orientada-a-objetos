@@ -54,6 +54,43 @@ void Auto::tipo(){
 
 } 
 
+class Modelo {
+	private:
+		string modelo2;
+		string modelo3;
+		string modelo4;
+		
+	public: //setters
+		Modelo();
+		void setModelo(string,string,string);
+		//getters
+		string getModelomodelo2();
+		string getModelomodelo3();
+		string getModelomodelo4();
+
+};
+
+Modelo::Modelo(){
+}
+
+void Modelo::setModelo(string _modelo2,string _modelo3,string _modelo4){
+	modelo2 = _modelo2;
+	modelo3 = _modelo3;
+	modelo4 = _modelo4;
+}	
+
+string Modelo::getModelomodelo2(){
+	return modelo2;
+}
+
+string Modelo::getModelomodelo3(){
+	return modelo3;
+}
+
+string Modelo::getModelomodelo4(){
+	return modelo4;
+}
+
 
 class Destinos {
 	private:
@@ -123,8 +160,14 @@ int main () {
             case 2: {
                 	Auto q1 = Auto(25,"Tsuru");
 					Auto q2(10,"Camaro");
-					Auto q3(45,"Leon 245 HP");  
+					Auto q3(45,"Leon 245 HP"); 
 					
+					Modelo modelo1;
+					
+					modelo1.setModelo("Nissan","Chevrolet","Cupra");
+					cout<<modelo1.getModelomodelo2()<<endl;
+					cout<<modelo1.getModelomodelo3()<<endl;
+					cout<<modelo1.getModelomodelo4()<<endl;				
 					q1.tipo();
 					q1.contar();
 					cout<<"***********"<<endl;
@@ -134,7 +177,7 @@ int main () {
 					q3.tipo();
 					q3.contar();              
                 
-                system("pause>nul"); // Pausa
+                system("pause>nul");
                 break;
             }
                 
