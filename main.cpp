@@ -119,6 +119,37 @@ void Destinos::destino(){
 
 } 
 
+class Viaje {
+	private:
+		string viaje1;
+		string viaje2;
+		
+	public: //setters
+		Viaje();
+		void setViaje(string,string);
+		//getters
+		string getViajeviaje1();
+		string getViajeviaje2();
+
+};
+
+Viaje::Viaje(){
+}
+
+void Viaje::setViaje(string _viaje1,string _viaje2){
+	viaje1 = _viaje1;
+	viaje2 = _viaje2;
+}	
+
+string Viaje::getViajeviaje1(){
+	return viaje1;
+}
+
+string Viaje::getViajeviaje2(){
+	return viaje2;
+}
+
+
 
 int main () {
 	
@@ -144,6 +175,7 @@ int main () {
 				Conductor p3(30, "Alain");  
 				
 				cout << "Personal total: 3 "<<endl;
+				cout<<"***********"<<endl;
 				p1.set_nombre();
 				p1.set_edad();
 				cout<<"***********"<<endl;
@@ -166,16 +198,27 @@ int main () {
 					
 					modelo1.setModelo("Nissan","Chevrolet","Cupra");
 					cout<<modelo1.getModelomodelo2()<<endl;
-					cout<<modelo1.getModelomodelo3()<<endl;
-					cout<<modelo1.getModelomodelo4()<<endl;				
+					
 					q1.tipo();
 					q1.contar();
+					
 					cout<<"***********"<<endl;
+					
+					cout<<modelo1.getModelomodelo3()<<endl;
+					
+					
 					q2.tipo();
 					q2.contar();
 					cout<<"***********"<<endl;
+					
+					cout<<modelo1.getModelomodelo4()<<endl;				
+				
 					q3.tipo();
-					q3.contar();              
+					q3.contar();
+					cout<<"***********"<<endl;
+					cout<<"Unidades totales: 80"<<endl;
+					
+					      
                 
                 system("pause>nul");
                 break;
@@ -185,7 +228,16 @@ int main () {
                 Destinos w1 = Destinos(3,"CDMX");
 				Destinos w2(3,"San Luis Potosi");
 				Destinos w3(4,"Puebla");
+				Destinos w4(1,"Bernal");
+				Destinos w5(1,"Tequisquiapan");
+				Destinos w6(3,"Jalpan de Serra");
 				
+				Viaje viaje4;
+					
+					viaje4.setViaje("Nacionales","Regionales");
+					
+					cout<<viaje4.getViajeviaje1()<<endl;
+				cout<<"***********"<<endl;
 				w1.destino();
 				w1.horas();
 				cout<<"***********"<<endl;
@@ -194,7 +246,18 @@ int main () {
 				cout<<"***********"<<endl;
 				w3.destino();
 				w3.horas();
-	               
+				cout<<"***********"<<endl;
+				cout<<"***********"<<endl;
+				cout<<viaje4.getViajeviaje2()<<endl;
+	            cout<<"***********"<<endl;
+				w4.destino();
+				w4.horas();
+				cout<<"***********"<<endl;
+				w5.destino();
+				w5.horas();
+				cout<<"***********"<<endl;
+				w6.destino();
+				w6.horas();   
                 
                 system("pause>nul"); // Pausa            
                 break;
@@ -209,7 +272,5 @@ int main () {
 	 
     return 0;
 }
-	
-	
 	
 
