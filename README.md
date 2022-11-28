@@ -19,3 +19,7 @@ En este avance se declararon 3 clases: conductor,auto y destinos. A cada clase s
 AVANCE 2
 
 Se realizo un diagrama de clases UML en el que se declaraban todas las clases y sus atributos y tambien son llamadas en el main
+
+AVANCE 3
+
+Se reescribio todo lo del diagrama UML a codigo, agregando destinos nacionales y regionales, numero de empleados totales y las marcas de los autos de la compañia
