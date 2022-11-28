@@ -96,17 +96,20 @@ class Destinos {
 	private:
 		int tiempo;
 		string lugar;
+		float kilometraje;
 		
 	public: //setters
-		Destinos(int,string);
+		Destinos(int,string,float);
 		void horas();
 		void destino();
+		void km();
 
 };
 
-Destinos::Destinos(int _tiempo,string _lugar){
+Destinos::Destinos(int _tiempo,string _lugar,float _kilometraje){
 	tiempo=_tiempo;
 	lugar=_lugar;
+	kilometraje=_kilometraje;
 }
 //getters
 void Destinos::horas(){
@@ -118,6 +121,10 @@ void Destinos::destino(){
 	
 
 } 
+
+void Destinos::km(){
+	cout<<kilometraje<<" Km"<<endl;
+}
 
 class Viaje {
 	private:
@@ -225,12 +232,12 @@ int main () {
             }
                 
             case 3: {
-                Destinos w1 = Destinos(3,"CDMX");
-				Destinos w2(3,"San Luis Potosi");
-				Destinos w3(4,"Puebla");
-				Destinos w4(1,"Bernal");
-				Destinos w5(1,"Tequisquiapan");
-				Destinos w6(3,"Jalpan de Serra");
+                Destinos w1 = Destinos(3,"CDMX",217);
+				Destinos w2(3,"San Luis Potosi",207);
+				Destinos w3(4,"Puebla",340);
+				Destinos w4(1,"Bernal",64);
+				Destinos w5(1,"Tequisquiapan",72);
+				Destinos w6(3,"Jalpan de Serra",189);
 				
 				Viaje viaje4;
 					
@@ -240,24 +247,31 @@ int main () {
 				cout<<"***********"<<endl;
 				w1.destino();
 				w1.horas();
+				w1.km();
 				cout<<"***********"<<endl;
 				w2.destino();
 				w2.horas();
+				w2.km();
 				cout<<"***********"<<endl;
 				w3.destino();
 				w3.horas();
+				w3.km();
 				cout<<"***********"<<endl;
 				cout<<"***********"<<endl;
+				
 				cout<<viaje4.getViajeviaje2()<<endl;
-	            cout<<"***********"<<endl;
+	            		cout<<"***********"<<endl;
 				w4.destino();
 				w4.horas();
+				w4.km();
 				cout<<"***********"<<endl;
 				w5.destino();
 				w5.horas();
+				w5.km();
 				cout<<"***********"<<endl;
 				w6.destino();
-				w6.horas();   
+				w6.horas();
+				w6.km();   
                 
                 system("pause>nul"); // Pausa            
                 break;
@@ -272,5 +286,4 @@ int main () {
 	 
     return 0;
 }
-	
 
