@@ -1,12 +1,12 @@
 class Conductor {
-	private:
+	private: //Atributos
 		int edad;
 		string nombre;
 		
-	public:
-		Conductor(int,string);
-		void manejar();
-		void hablar();
+	public: //metodos
+		Conductor(int,string); //constructor
+		void set_nombre();
+		void set_edad();
 };
 
 Conductor::Conductor(int _edad,string _nombre){
@@ -14,10 +14,10 @@ Conductor::Conductor(int _edad,string _nombre){
 	nombre=_nombre;
 }
 
-void Conductor::hablar(){
+void Conductor::set_nombre(){
 	cout<<"Nombre: "<<nombre<<" "<<endl;
 }
 
-void Conductor::manejar(){
+void Conductor::set_edad(){
 	cout<<"Edad: "<<edad<< " "<<endl;
 } 
