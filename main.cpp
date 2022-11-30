@@ -7,7 +7,7 @@ class Conductor {
 		int edad;
 		string nombre;
 		
-	public: //setters
+	public: 
 		Conductor(int,string);
 		void set_nombre();
 		void set_edad();
@@ -17,7 +17,7 @@ Conductor::Conductor(int _edad,string _nombre){
 	edad=_edad;
 	nombre=_nombre;
 }
-//getters
+
 void Conductor::set_nombre(){
 	cout<<"Nombre: "<<nombre<<" "<<endl;
 }
@@ -32,7 +32,7 @@ class Auto {
 		int cantidad;
 		string marca;
 		
-	public: //setters
+	public: 
 		Auto(int,string);
 		void contar();
 		void tipo();
@@ -43,7 +43,7 @@ Auto::Auto(int _cantidad,string _marca){
 	cantidad=_cantidad;
 	marca=_marca;
 }
-//getters
+
 void Auto::contar(){
 	cout<<"Unidades disponilbes: "<<cantidad<<" "<<endl;
 }
@@ -60,10 +60,10 @@ class Modelo {
 		string modelo3;
 		string modelo4;
 		
-	public: //setters
+	public: 
 		Modelo();
 		void setModelo(string,string,string);
-		//getters
+	
 		string getModelomodelo2();
 		string getModelomodelo3();
 		string getModelomodelo4();
@@ -93,17 +93,25 @@ string Modelo::getModelomodelo4(){
 
 
 class Destinos {
-	private:
+	private: //Atributos
 		int tiempo;
 		string lugar;
 		float kilometraje;
 		
-	public: //setters
-		Destinos(int,string,float);
+	public: //Metodos
+		Destinos(int,string,float); //constructor
 		void horas();
 		void destino();
 		void km();
 
+};
+
+class Costo : public Destinos{
+	private: //Atributos
+		int cantidad;
+	public: //Metodos
+		Costo(int,string,float,int); //Constructor de la clase Costo
+		void mostrarCosto();
 };
 
 Destinos::Destinos(int _tiempo,string _lugar,float _kilometraje){
@@ -111,7 +119,11 @@ Destinos::Destinos(int _tiempo,string _lugar,float _kilometraje){
 	lugar=_lugar;
 	kilometraje=_kilometraje;
 }
-//getters
+
+Costo::Costo(int _tiempo,string _lugar,float _kilometraje,int _cantidad) : Destinos(_tiempo,_lugar,_kilometraje){
+
+	cantidad = _cantidad;
+}
 void Destinos::horas(){
 	cout<<"Tiempo: "<<tiempo<<" horas "<<endl;
 }
@@ -126,15 +138,24 @@ void Destinos::km(){
 	cout<<kilometraje<<" Km"<<endl;
 }
 
+
+
+void Costo::mostrarCosto(){
+	destino();
+	horas();
+	km();
+	cout<<"Costo: $ "<<cantidad<<endl;
+}
+
 class Viaje {
 	private:
 		string viaje1;
 		string viaje2;
 		
-	public: //setters
+	public:
 		Viaje();
 		void setViaje(string,string);
-		//getters
+	
 		string getViajeviaje1();
 		string getViajeviaje2();
 
@@ -232,12 +253,14 @@ int main () {
             }
                 
             case 3: {
-                Destinos w1 = Destinos(3,"CDMX",217);
-				Destinos w2(3,"San Luis Potosi",207);
-				Destinos w3(4,"Puebla",340);
-				Destinos w4(1,"Bernal",64);
-				Destinos w5(1,"Tequisquiapan",72);
-				Destinos w6(3,"Jalpan de Serra",189);
+				
+				Costo costo1(3,"CDMX",217,2170);
+				Costo costo2(3,"San Luis Potosi",207,2070);
+				Costo costo3(4,"Puebla",340,3400);
+				Costo costo4(1,"Bernal",64,640);
+				Costo costo5(1,"Tequisquiapan",72,720);
+				Costo costo6(3,"Jalpan de Serra",189,1890);
+				
 				
 				Viaje viaje4;
 					
@@ -245,34 +268,24 @@ int main () {
 					
 					cout<<viaje4.getViajeviaje1()<<endl;
 				cout<<"***********"<<endl;
-				w1.destino();
-				w1.horas();
-				w1.km();
+	
+				costo1.mostrarCosto();
+				
 				cout<<"***********"<<endl;
-				w2.destino();
-				w2.horas();
-				w2.km();
+				costo2.mostrarCosto();
 				cout<<"***********"<<endl;
-				w3.destino();
-				w3.horas();
-				w3.km();
+				costo3.mostrarCosto();
 				cout<<"***********"<<endl;
 				cout<<"***********"<<endl;
 				
 				cout<<viaje4.getViajeviaje2()<<endl;
 	            		cout<<"***********"<<endl;
-				w4.destino();
-				w4.horas();
-				w4.km();
+				costo4.mostrarCosto();
 				cout<<"***********"<<endl;
-				w5.destino();
-				w5.horas();
-				w5.km();
+				costo5.mostrarCosto();
 				cout<<"***********"<<endl;
-				w6.destino();
-				w6.horas();
-				w6.km();   
-                
+				costo6.mostrarCosto();
+				
                 system("pause>nul"); // Pausa            
                 break;
             }
@@ -286,4 +299,3 @@ int main () {
 	 
     return 0;
 }
-
