@@ -23,3 +23,14 @@ Se realizo un diagrama de clases UML en el que se declaraban todas las clases y 
 AVANCE 3
 
 Se reescribio todo lo del diagrama UML a codigo, agregando destinos nacionales y regionales, numero de empleados totales y las marcas de los autos de la compañia
+
+ENTREGA FINAL
+
+Se corrigieron todos los errores.
+Se añadieron getters y setters en las clases de VIAJE y MODELO.
+Se añadio herencia en la clase de DESTINOS
+Se dividió el codigo en diferentes archivo y cada uno incluye cada clase del codigo. Uno de los archivos contiene el diagrama UML, otro contiene el MAIN y hay otro archivo que contiene todo el codigo 
+
+Cuando se ejecuta el codigo este muestra un menu en el que el usuario tiene que seleccionar lo que quiere ver ingresando algun numero de las opciones que se despliegan y una vez que se ingreso el numero se tiene que dar enter y luego se desplegaran los datos correspondientes a la opción.
+
+El programa consiste en una base de datos de una compañia que brinda servicios de trnasporte en el coual se puede consultar el personal, los vehiculos y los destinos con los que cuenta la empresa.
