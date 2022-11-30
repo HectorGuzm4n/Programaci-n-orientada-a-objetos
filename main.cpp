@@ -1,5 +1,10 @@
 #include <iostream>
 #include <stdlib.h>
+#include <Conductor.h>
+#include <Auto.h>
+#include <Modelo.h>
+#include <Destinos.h>
+#include <viaje.h>
 using namespace std;
 
 int main () {
