@@ -1,10 +1,10 @@
 class Auto {
-	private:
+	private: //Atributos
 		int cantidad;
 		string marca;
 		
-	public:
-		Auto(int,string);
+	public: //metodos
+		Auto(int,string); //constructor
 		void contar();
 		void tipo();
 
