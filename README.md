@@ -9,7 +9,7 @@ En la parte de los autos se mostraran los modelos de autos con los que se cuenta
 
 Por ultimo en la parte de destinos, esta desplegara los destinos disponibles y tambien el tiempo estimado de viaje
 
-El usuario es libre de sleccionar la opcion que el quiera paa ver los datos y tambien podra modificar datos en caso de que en algun futuro hayan cambios
+El usuario es libre de sleccionar la opcion que el quiera paa ver los datos.
 
 
 AVANCE 1
