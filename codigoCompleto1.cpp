@@ -3,12 +3,12 @@
 using namespace std;
 
 class Conductor {
-	private:
+	private: //Atributos
 		int edad;
 		string nombre;
 		
-	public: 
-		Conductor(int,string);
+	public: //metodos
+		Conductor(int,string); //constructor
 		void set_nombre();
 		void set_edad();
 };
@@ -28,12 +28,12 @@ void Conductor::set_edad(){
 
 
 class Auto {
-	private:
+	private: //Atributos
 		int cantidad;
 		string marca;
 		
-	public: 
-		Auto(int,string);
+	public: //metodos
+		Auto(int,string); //constructor
 		void contar();
 		void tipo();
 
@@ -55,28 +55,31 @@ void Auto::tipo(){
 } 
 
 class Modelo {
-	private:
+	private: //Atributos
 		string modelo2;
 		string modelo3;
 		string modelo4;
+		string modelo5;
 		
-	public: 
-		Modelo();
-		void setModelo(string,string,string);
-	
+	public: //metodos
+		Modelo(); //constructor
+		void setModelo(string,string,string,string);
+		//Getters
 		string getModelomodelo2();
 		string getModelomodelo3();
 		string getModelomodelo4();
+		string getModelomodelo5();
 
 };
 
 Modelo::Modelo(){
 }
-
-void Modelo::setModelo(string _modelo2,string _modelo3,string _modelo4){
+//setters
+void Modelo::setModelo(string _modelo2,string _modelo3,string _modelo4,string _modelo5){
 	modelo2 = _modelo2;
 	modelo3 = _modelo3;
 	modelo4 = _modelo4;
+	modelo5 = _modelo5;
 }	
 
 string Modelo::getModelomodelo2(){
@@ -91,6 +94,9 @@ string Modelo::getModelomodelo4(){
 	return modelo4;
 }
 
+string Modelo::getModelomodelo5(){
+	return modelo5;
+}
 
 class Destinos {
 	private: //Atributos
@@ -113,7 +119,7 @@ class Costo : public Destinos{
 		Costo(int,string,float,int); //Constructor de la clase Costo
 		void mostrarCosto();
 };
-
+//constructor de la clase padre
 Destinos::Destinos(int _tiempo,string _lugar,float _kilometraje){
 	tiempo=_tiempo;
 	lugar=_lugar;
@@ -148,14 +154,14 @@ void Costo::mostrarCosto(){
 }
 
 class Viaje {
-	private:
+	private: //Atributos
 		string viaje1;
 		string viaje2;
 		
-	public:
-		Viaje();
+	public: //metodos
+		Viaje(); //constructor
 		void setViaje(string,string);
-	
+		//Getters
 		string getViajeviaje1();
 		string getViajeviaje2();
 
@@ -163,7 +169,7 @@ class Viaje {
 
 Viaje::Viaje(){
 }
-
+//setters
 void Viaje::setViaje(string _viaje1,string _viaje2){
 	viaje1 = _viaje1;
 	viaje2 = _viaje2;
@@ -200,9 +206,11 @@ int main () {
             case 1: {
                 Conductor p1 = Conductor(22, "Oscar");
 				Conductor p2(25,"Victor");
-				Conductor p3(30, "Alain");  
+				Conductor p3(30, "Alain"); 
+				Conductor p4(32,"Isaac");
+				Conductor p5(25,"Juan"); 
 				
-				cout << "Personal total: 3 "<<endl;
+				cout << "Personal total: 5 "<<endl;
 				cout<<"***********"<<endl;
 				p1.set_nombre();
 				p1.set_edad();
@@ -211,20 +219,26 @@ int main () {
 				p2.set_edad();
 				cout<<"***********"<<endl;
 				p3.set_nombre();
-				p3.set_edad();            
+				p3.set_edad();   
+				cout<<"***********"<<endl;
+				p4.set_nombre();
+				p4.set_edad(); 
+				cout<<"***********"<<endl;
+				p5.set_nombre();
+				p5.set_edad();          
                 
                 system("pause>nul");
                 break;
             }
                 
             case 2: {
-                	Auto q1 = Auto(25,"Tsuru");
+                	Auto q1 = Auto(5,"Tsuru");
 					Auto q2(10,"Camaro");
-					Auto q3(45,"Leon 245 HP"); 
-					
+					Auto q3(5,"Adventador"); 
+					Auto q4(2,"620R");
 					Modelo modelo1;
 					
-					modelo1.setModelo("Nissan","Chevrolet","Cupra");
+					modelo1.setModelo("Nissan","Chevrolet","Lamborghini","McLaren");
 					cout<<modelo1.getModelomodelo2()<<endl;
 					
 					q1.tipo();
@@ -244,8 +258,13 @@ int main () {
 					q3.tipo();
 					q3.contar();
 					cout<<"***********"<<endl;
-					cout<<"Unidades totales: 80"<<endl;
 					
+					cout<<modelo1.getModelomodelo5()<<endl;				
+				
+					q4.tipo();
+					q4.contar();
+					cout<<"***********"<<endl;
+					cout<<"Unidades totales: 22"<<endl;
 					      
                 
                 system("pause>nul");
@@ -279,7 +298,7 @@ int main () {
 				cout<<"***********"<<endl;
 				
 				cout<<viaje4.getViajeviaje2()<<endl;
-	            		cout<<"***********"<<endl;
+	           		cout<<"***********"<<endl;
 				costo4.mostrarCosto();
 				cout<<"***********"<<endl;
 				costo5.mostrarCosto();
@@ -299,3 +318,7 @@ int main () {
 	 
     return 0;
 }
+	
+	
+	
+
