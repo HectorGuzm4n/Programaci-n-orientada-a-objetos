@@ -28,9 +28,11 @@ int main () {
             case 1: {
                 Conductor p1 = Conductor(22, "Oscar");
 				Conductor p2(25,"Victor");
-				Conductor p3(30, "Alain");  
+				Conductor p3(30, "Alain"); 
+				Conductor p4(32,"Isaac");
+				Conductor p5(25,"Juan"); 
 				
-				cout << "Personal total: 3 "<<endl;
+				cout << "Personal total: 5 "<<endl;
 				cout<<"***********"<<endl;
 				p1.set_nombre();
 				p1.set_edad();
@@ -39,20 +41,26 @@ int main () {
 				p2.set_edad();
 				cout<<"***********"<<endl;
 				p3.set_nombre();
-				p3.set_edad();            
+				p3.set_edad();   
+				cout<<"***********"<<endl;
+				p4.set_nombre();
+				p4.set_edad(); 
+				cout<<"***********"<<endl;
+				p5.set_nombre();
+				p5.set_edad();          
                 
                 system("pause>nul");
                 break;
             }
                 
             case 2: {
-                	Auto q1 = Auto(25,"Tsuru");
+                	Auto q1 = Auto(5,"Tsuru");
 					Auto q2(10,"Camaro");
-					Auto q3(45,"Adventador"); 
-					
+					Auto q3(5,"Adventador"); 
+					Auto q4(2,"620R");
 					Modelo modelo1;
 					
-					modelo1.setModelo("Nissan","Chevrolet","Lamborghini");
+					modelo1.setModelo("Nissan","Chevrolet","Lamborghini","McLaren");
 					cout<<modelo1.getModelomodelo2()<<endl;
 					
 					q1.tipo();
@@ -72,8 +80,13 @@ int main () {
 					q3.tipo();
 					q3.contar();
 					cout<<"***********"<<endl;
-					cout<<"Unidades totales: 80"<<endl;
 					
+					cout<<modelo1.getModelomodelo5()<<endl;				
+				
+					q4.tipo();
+					q4.contar();
+					cout<<"***********"<<endl;
+					cout<<"Unidades totales: 22"<<endl;
 					      
                 
                 system("pause>nul");
@@ -127,3 +140,6 @@ int main () {
 	 
     return 0;
 }
+	
+	
+	
