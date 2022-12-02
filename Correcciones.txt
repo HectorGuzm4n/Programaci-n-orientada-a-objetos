@@ -1,0 +1,1 @@
+Se corrigieron todos los errores. Se añadieron getters y setters en las clases de VIAJE y MODELO. Se añadio herencia en la clase de DESTINOS Se dividió el codigo en diferentes archivo y cada uno incluye cada clase del codigo. Uno de los archivos contiene el diagrama UML, otro contiene el MAIN y hay otro archivo que contiene todo el codigo
